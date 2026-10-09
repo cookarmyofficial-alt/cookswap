@@ -1,0 +1,728 @@
+[
+  {
+    "key": "ethereum",
+    "name": "Ethereum",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 1,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0xC02aaA39b223FE8D0A0E5C4F27eAD9083C756Cc2",
+    "logo": null,
+    "rpc": "https://ethereum-rpc.publicnode.com",
+    "fallback": [
+      "https://1rpc.io/eth",
+      "https://cloudflare-eth.com",
+      "https://ethereum-rpc.publicnode.com",
+      "https://rpc.ankr.com/eth",
+      "https://eth.drpc.org",
+      "https://eth-mainnet.g.alchemy.com/public",
+      "https://ethereum-public.nodies.app",
+      "https://ethereum.public.blockpi.network/v1/rpc/public",
+      "https://rpc.flashbots.net",
+      "https://rpc.flashbots.net/fast",
+      "https://rpc.mevblocker.io",
+      "https://api.noderpc.xyz/rpc-mainnet/public",
+      "https://eth.merkle.io",
+      "https://eth.api.onfinality.io/public",
+      "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "https://gateway.tenderly.co/public/mainnet"
+    ],
+    "explorer": "https://etherscan.io",
+    "v2Factory": "0xf7c7080a9a389c650dccf6ad2da5414a1dd937ed",
+    "v2Router": "",
+    "v3Factory": "",
+    "v3Router": "",
+    "sources": [],
+    "routers": [
+      "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    ],
+    "stablecoins": [
+      "0xA0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    ]
+  },
+  {
+    "key": "base",
+    "name": "Base",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 8453,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0x4200000000000000000000000000000000000006",
+    "logo": null,
+    "rpc": "https://mainnet.base.org",
+    "fallback": [
+      "https://base-rpc.publicnode.com",
+      "https://base.llamarpc.com",
+      "https://mainnet.base.org",
+      "https://rpc.ankr.com/base",
+      "https://base.drpc.org",
+      "https://1rpc.io/base",
+      "https://base-mainnet.g.alchemy.com/public",
+      "https://base.public.blockpi.network/v1/rpc/public",
+      "https://base.api.onfinality.io/public",
+      "https://endpoints.omniatech.io/v1/base/mainnet/public",
+      "https://base.gateway.tenderly.co",
+      "https://base-public.nodies.app",
+      "https://base.rpc.thirdweb.com",
+      "https://base.rpc.subquery.network/public",
+      "https://publicnode.com/base"
+    ],
+    "explorer": "https://basescan.org",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "v3Router": "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+    "sources": [],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24"
+    ],
+    "stablecoins": [
+      "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA"
+    ]
+  },
+  {
+    "key": "bsc",
+    "name": "BNB Chain",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 56,
+    "nativeSymbol": "BNB",
+    "nativeDecimals": 18,
+    "wrapped": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "logo": null,
+    "rpc": "https://bsc-rpc.publicnode.com",
+    "fallback": [
+      "https://1rpc.io/bnb",
+      "https://bsc-dataseed.binance.org",
+      "https://bsc-dataseed.bnbchain.org",
+      "https://bsc-dataseed1.bnbchain.org",
+      "https://bsc-dataseed2.bnbchain.org",
+      "https://bsc-dataseed3.bnbchain.org",
+      "https://bsc-dataseed4.bnbchain.org",
+      "https://rpc.ankr.com/bsc",
+      "https://bsc-rpc.publicnode.com",
+      "https://bsc.drpc.org",
+      "https://public.1rpc.io/bnb",
+      "https://bnb-mainnet.g.alchemy.com/public",
+      "https://binance-smart-chain-public.nodies.app",
+      "https://bsc.blockpi.network/v1/rpc/public",
+      "https://endpoints.omniatech.io/v1/bsc/mainnet/public",
+      "https://public-bsc-mainnet.fastnode.io",
+      "https://bnb.rpc.subquery.network/public",
+      "https://rpc-bsc.48.club",
+      "https://bsc.api.onfinality.io/public",
+      "https://bsc.merkle.io",
+      "https://binance.rpc.thirdweb.com",
+      "https://bsc.api.pocket.network"
+    ],
+    "explorer": "https://bscscan.com",
+    "v2Factory": "0xf40bef79cd4cba221646ec21bb1277bccc9aab82",
+    "v2Router": "0xbaa02841530d89bd379f80245d3047a0537ab25b",
+    "v3Factory": "0x1da528f72c0410fcc05625235af0cee9dc2b7d14",
+    "v3Router": "0x2ebe8cf097dfac228d525f39c26a1248686dc5d7",
+    "sources": [
+      {
+        "name": "PancakeSwap V2",
+        "type": "v2",
+        "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+        "quoter": ""
+      },
+      {
+        "name": "Uniswap V2",
+        "type": "v2",
+        "router": "0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24",
+        "quoter": ""
+      },
+      {
+        "name": "PancakeSwap V3",
+        "type": "v3",
+        "router": "0x1b81D678ffb9C0263b24A97847620C99d213eB14",
+        "quoter": "0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997"
+      },
+      {
+        "name": "PancakeSwap Smart Router",
+        "type": "universal",
+        "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+        "quoter": "0x678Aa4bF4E210cf2166753e054d5b7c31cc7fa86"
+      },
+      {
+        "name": "PancakeSwap V3 Universal Router",
+        "type": "universal",
+        "router": "0x1A0A18AC4BECDDbd6389559687d1A73d8927E416",
+        "quoter": "0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997"
+      },
+      {
+        "name": "PancakeSwap Infinity Universal Router",
+        "type": "universal",
+        "router": "0xd9C500DfF816a1Da21A48A732d3498Bf09dc9AEB",
+        "quoter": ""
+      },
+      {
+        "name": "Uniswap V3",
+        "type": "v3",
+        "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+        "quoter": "0x78D78E420Da98ad378D7799bE8f4AF69033EB077"
+      },
+      {
+        "name": "Uniswap Universal Router 2.0",
+        "type": "universal",
+        "router": "0x1906c1d672b88cd1b9ac7593301ca990f94eae07",
+        "quoter": "0x78D78E420Da98ad378D7799bE8f4AF69033EB077"
+      },
+      {
+        "name": "Uniswap Universal Router 2.1.1",
+        "type": "universal",
+        "router": "0x8b844f885672f333bc0042cb669255f93a4c1e6b",
+        "quoter": "0x78D78E420Da98ad378D7799bE8f4AF69033EB077"
+      },
+      {
+        "name": "Biswap Smart Router",
+        "type": "universal",
+        "router": "0x0eB6949e725A295Ecb3BEacFc3766610BC970BEF",
+        "quoter": ""
+      },
+      {
+        "name": "DODO V2 RouteProxy",
+        "type": "universal",
+        "router": "0x6B3D817814eABc984d51896b1015C0b89E9737Ca",
+        "quoter": "0xb48eE7B874Af8bC0e068036e55e33b5DC91C3a65"
+      },
+      {
+        "name": "DODO V3 D3Proxy",
+        "type": "universal",
+        "router": "0x8fb36F4CF67EF12Cc0b63CF951ca0b4f9a8F1953",
+        "quoter": ""
+      }
+    ],
+    "routers": [
+      "0xbaa02841530d89bd379f80245d3047a0537ab25b",
+      "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+      "0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24"
+    ],
+    "stablecoins": [
+      "0x55d398326f99059fF775485246999027B3197955",
+      "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+      "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+    ]
+  },
+  {
+    "key": "optimism",
+    "name": "Optimism",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 10,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0x4200000000000000000000000000000000000006",
+    "logo": null,
+    "rpc": "https://mainnet.optimism.io",
+    "fallback": [
+      "https://optimism.publicnode.com",
+      "https://mainnet.optimism.io",
+      "https://optimism-rpc.publicnode.com",
+      "https://rpc.ankr.com/optimism",
+      "https://optimism.drpc.org",
+      "https://1rpc.io/op",
+      "https://optimism.blockpi.network/v1/rpc/public",
+      "https://optimism-mainnet.public.blastapi.io",
+      "https://optimism.api.onfinality.io/public",
+      "https://endpoints.omniatech.io/v1/op/mainnet/public",
+      "https://optimism.gateway.tenderly.co",
+      "https://optimism-public.nodies.app",
+      "https://optimism.rpc.thirdweb.com",
+      "https://api.noderpc.xyz/rpc-optimism-mainnet/public",
+      "https://optimism-rpc.polkachu.com",
+      "https://rpc.optimism.gateway.fm"
+    ],
+    "explorer": "https://optimistic.etherscan.io",
+    "v2Factory": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v2Router": "0x5264f98afc705042ca049fa4a83578cde9b4e3da",
+    "v3Factory": "0xf40bef79cd4cba221646ec21bb1277bccc9aab82",
+    "v3Router": "0xbaa02841530d89bd379f80245d3047a0537ab25b",
+    "sources": [],
+    "routers": [
+      "0x5264f98afc705042ca049fa4a83578cde9b4e3da",
+      "0x4A7b5Da61326A6379179b40d00F57E5bbDC962c2"
+    ],
+    "stablecoins": [
+      "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+      "0x0b2C639c533813f4Aa9D7837CaF62653d097Ff85",
+      "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1"
+    ]
+  },
+  {
+    "key": "sonic",
+    "name": "Sonic",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 146,
+    "nativeSymbol": "S",
+    "nativeDecimals": 18,
+    "wrapped": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+    "logo": null,
+    "rpc": "https://rpc.soniclabs.com",
+    "fallback": [
+      "https://rpc.soniclabs.com",
+      "https://sonic-rpc.publicnode.com",
+      "https://rpc.ankr.com/sonic_mainnet",
+      "https://sonic.drpc.org",
+      "https://public.1rpc.io/sonic",
+      "https://sonic.api.onfinality.io/public",
+      "https://sonic.api.pocket.network",
+      "https://rpc.nodeflare.app/sonic/public",
+      "https://lb.routeme.sh/rpc/evm/146",
+      "https://sonic-mainnet.rpc.sentio.xyz",
+      "https://rpc.sentio.xyz/sonic-mainnet",
+      "https://sonic-json-rpc.stakely.io",
+      "https://sonic-rpc.blockreq.com/v1/rpc/public"
+    ],
+    "explorer": "https://sonicscan.org",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+    "v3Router": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "sources": [],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0x1D368773735ee1E678950B7A97bcA2CafB330CDc"
+    ],
+    "stablecoins": [
+      "0x29219dd400f2Bf60E5a23d13Be72B486D4038894"
+    ]
+  },
+  {
+    "key": "arbitrum",
+    "name": "Arbitrum",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 42161,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+    "logo": null,
+    "rpc": "https://arb1.arbitrum.io/rpc",
+    "fallback": [
+      "https://arbitrum.publicnode.com",
+      "https://arb1.arbitrum.io/rpc",
+      "https://arbitrum-rpc.publicnode.com",
+      "https://rpc.ankr.com/arbitrum",
+      "https://arbitrum.drpc.org",
+      "https://1rpc.io/arb",
+      "https://arbitrum.blockpi.network/v1/rpc/public",
+      "https://arbitrum-one.public.blastapi.io",
+      "https://arbitrum.api.onfinality.io/public",
+      "https://endpoints.omniatech.io/v1/arbitrum/mainnet/public",
+      "https://arbitrum.gateway.tenderly.co",
+      "https://arbitrum.rpc.thirdweb.com",
+      "https://arbitrum.rpc.subquery.network/public",
+      "https://arbitrum-public.nodies.app",
+      "https://arbitrum.llamarpc.com",
+      "https://arbitrum.meowrpc.com",
+      "https://api.noderpc.xyz/rpc-arbitrum-one/public"
+    ],
+    "explorer": "https://arbiscan.io",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "v3Router": "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+    "sources": [],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
+      "0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24"
+    ],
+    "stablecoins": [
+      "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "0xFd086bC7CD5C481DCC9C85ebe478A1C0b69FCbb9",
+      "0xFF970A61A04b1Ca14834A43f5dE4533eBDDB5CC8"
+    ]
+  },
+  {
+    "key": "polygon",
+    "name": "Polygon",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 137,
+    "nativeSymbol": "POL",
+    "nativeDecimals": 18,
+    "wrapped": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+    "logo": null,
+    "rpc": "https://polygon-bor-rpc.publicnode.com",
+    "fallback": [
+      "https://1rpc.io/matic",
+      "https://rpc.ankr.com/polygon",
+      "https://polygon.llamarpc.com",
+      "https://polygon-rpc.com",
+      "https://polygon-bor-rpc.publicnode.com",
+      "https://polygon.drpc.org",
+      "https://polygon.blockpi.network/v1/rpc/public",
+      "https://polygon-mainnet.public.blastapi.io",
+      "https://polygon.api.onfinality.io/public",
+      "https://endpoints.omniatech.io/v1/matic/mainnet/public",
+      "https://polygon.rpc.subquery.network/public",
+      "https://polygon.rpc.thirdweb.com",
+      "https://polygon.gateway.tenderly.co",
+      "https://polygon.meowrpc.com",
+      "https://polygon.publicnode.com"
+    ],
+    "explorer": "https://polygonscan.com",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+    "v3Router": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "sources": [],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff",
+      "0xedf6066a2b290C185783862C7F4776A2C8077AD1"
+    ],
+    "stablecoins": [
+      "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+      "0xc2132D05D31c914a87C6611C10748AaCbD1eFf3A",
+      "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359"
+    ]
+  },
+  {
+    "key": "avalanche",
+    "name": "Avalanche",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 43114,
+    "nativeSymbol": "AVAX",
+    "nativeDecimals": 18,
+    "wrapped": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+    "logo": null,
+    "rpc": "https://api.avax.network/ext/bc/C/rpc",
+    "fallback": [
+      "https://avalanche-c-chain.publicnode.com",
+      "https://api.avax.network/ext/bc/C/rpc",
+      "https://rpc.ankr.com/avalanche",
+      "https://avalanche-c-chain-rpc.publicnode.com",
+      "https://avalanche.drpc.org",
+      "https://1rpc.io/avax/c",
+      "https://avalanche-mainnet.public.blastapi.io/ext/bc/C/rpc",
+      "https://endpoints.omniatech.io/v1/avax/mainnet/public",
+      "https://avalanche.blockpi.network/v1/rpc/public",
+      "https://avax.meowrpc.com",
+      "https://43114.rpc.thirdweb.com"
+    ],
+    "explorer": "https://snowtrace.io",
+    "v2Factory": "0x790919e9ea6ac73595e31ad5c05db8ea5126580e",
+    "v2Router": "0x0ab828aa68499b56e9a47df9c4f1f5da703ff751",
+    "v3Factory": "0xf40bef79cd4cba221646ec21bb1277bccc9aab82",
+    "v3Router": "0xbaa02841530d89bd379f80245d3047a0537ab25b",
+    "sources": [],
+    "routers": [
+      "0x0ab828aa68499b56e9a47df9c4f1f5da703ff751",
+      "0x60aE616a2155Ee3d9A68541Ba4544862310933d4",
+      "0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24"
+    ],
+    "stablecoins": [
+      "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+      "0x9702230A8Ea53601f5Cd2dc00fDBc13d4Df4A8c7"
+    ]
+  },
+  {
+    "key": "robinhood",
+    "name": "Robinhood Chain",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 4663,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+    "logo": null,
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "fallback": [
+      "https://robinhood-mainnet-rpc.blockreq.com/v1/rpc/public",
+      "https://sequencer.mainnet.chain.robinhood.com"
+    ],
+    "explorer": "https://robinhoodchain.blockscout.com",
+    "v2Factory": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "v2Router": "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+    "v3Factory": "0x028581ea934d06cce20cc582b57b89ea1c0449d1",
+    "v3Router": "0xb2ba1249710e09d21bb01c5773cabc414d1ba485",
+    "sources": [
+      {
+        "name": "Uniswap V2",
+        "type": "v2",
+        "router": "0x89e5db8b5aa49aa85ac63f691524311aeb649eba",
+        "quoter": ""
+      },
+      {
+        "name": "Uniswap V3",
+        "type": "v3",
+        "router": "0xCaf681a66D020601342297493863E78C959E5cb2",
+        "quoter": "0x33e885ed0ec9bf04ecfb19341582aadcb4c8a9e7"
+      },
+      {
+        "name": "Uniswap Universal Router",
+        "type": "universal",
+        "router": "0x8876789976decbfcbbbe364623c63652db8c0904",
+        "quoter": ""
+      },
+      {
+        "name": "PancakeSwap V3 Universal Router",
+        "type": "universal",
+        "router": "0xE28c0e44F4016b073db20cF28971CAc6ce3664D3",
+        "quoter": ""
+      }
+    ],
+    "routers": [
+      "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+      "0x89e5db8b5aa49aa85ac63f691524311aeb649eba"
+    ],
+    "stablecoins": []
+  },
+  {
+    "key": "cookchain",
+    "name": "Cookchain",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 20261001,
+    "nativeSymbol": "COOK",
+    "nativeDecimals": 18,
+    "wrapped": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "logo": null,
+    "rpc": "https://rpc.cookscan.net/evm",
+    "fallback": [],
+    "explorer": "https://cookscan.net",
+    "v2Factory": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v2Router": "0x086cf2482f13bfcaad24ae55ae083f02ffbd8ef4",
+    "v3Factory": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "v3Router": "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+    "sources": [],
+    "routers": [
+      "0x086cf2482f13bfcaad24ae55ae083f02ffbd8ef4",
+      "0x5264f98afc705042ca049fa4a83578cde9b4e3da"
+    ],
+    "stablecoins": []
+  },
+  {
+    "key": "arc",
+    "name": "Arc",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 5042,
+    "nativeSymbol": "USDC",
+    "nativeDecimals": 18,
+    "wrapped": "",
+    "logo": null,
+    "rpc": "https://rpc.mainnet.arc.io",
+    "fallback": [
+      "https://rpc.blockdaemon.mainnet.arc.io",
+      "https://rpc.drpc.mainnet.arc.io",
+      "https://rpc.quicknode.mainnet.arc.io",
+      "https://rpc.nodeflare.app/arc/public",
+      "https://rpc.arc-scan.org"
+    ],
+    "explorer": "https://explorer.arc.io",
+    "v2Factory": "0x0ab828aa68499b56e9a47df9c4f1f5da703ff751",
+    "v2Router": "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+    "v3Factory": "0xf40bef79cd4cba221646ec21bb1277bccc9aab82",
+    "v3Router": "0xbaa02841530d89bd379f80245d3047a0537ab25b",
+    "sources": [],
+    "routers": [
+      "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+      "0x1f7d7550B1B028f7571e69A784071F0205fD2eFa"
+    ],
+    "stablecoins": [
+      "0x3600000000000000000000000000000000000000"
+    ]
+  },
+  {
+    "key": "linea",
+    "name": "Linea",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 59144,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+    "logo": null,
+    "rpc": "https://rpc.linea.build",
+    "fallback": [
+      "https://linea-rpc.publicnode.com"
+    ],
+    "explorer": "https://lineascan.build",
+    "v2Factory": "",
+    "v2Router": "",
+    "v3Factory": "",
+    "v3Router": "",
+    "sources": [
+      {
+        "name": "PancakeSwap V2",
+        "type": "v2",
+        "router": "0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb",
+        "quoter": ""
+      },
+      {
+        "name": "PancakeSwap V3",
+        "type": "v3",
+        "router": "0x1b81D678ffb9C0263b24A97847620C99d213eB14",
+        "quoter": "0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997"
+      }
+    ],
+    "routers": [
+      "0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb"
+    ],
+    "stablecoins": [
+      "0x176211869cA2b568f2A7D4EE941E073a821EE1ff"
+    ]
+  },
+  {
+    "key": "blast",
+    "name": "Blast",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 81457,
+    "nativeSymbol": "ETH",
+    "nativeDecimals": 18,
+    "wrapped": "0x4300000000000000000000000000000000000004",
+    "logo": null,
+    "rpc": "https://rpc.blast.io",
+    "fallback": [
+      "https://blast-rpc.publicnode.com",
+      "https://rpc.ankr.com/blast",
+      "https://blast.din.dev/rpc",
+      "https://blastl2-mainnet.public.blastapi.io",
+      "https://blast.blockpi.network/v1/rpc/public"
+    ],
+    "explorer": "https://blastscan.io",
+    "v2Factory": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v2Router": "0x5264f98afc705042ca049fa4a83578cde9b4e3da",
+    "v3Factory": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "v3Router": "0x1ef53b37a0913834498b640f4b626a2c2e5be0f5",
+    "sources": [
+      {
+        "name": "Thruster V2 0.30%",
+        "type": "v2",
+        "router": "0x98994a9a7a2570367554589189dc9772241650f6",
+        "quoter": ""
+      },
+      {
+        "name": "Thruster V2 1.00%",
+        "type": "v2",
+        "router": "0x44889b52b71e60de6ed7de82e2939fcc52fb2b4e",
+        "quoter": ""
+      },
+      {
+        "name": "Thruster V3",
+        "type": "v3",
+        "router": "0x337827814155ECBf24D20231fCA4444F530C0555",
+        "quoter": "0x3b299f65b47c0bfaeff715bc73077ba7a0a685be"
+      }
+    ],
+    "routers": [
+      "0x5264f98afc705042ca049fa4a83578cde9b4e3da",
+      "0x98994a9A7a2570367554589189dC9772241650f6"
+    ],
+    "stablecoins": [
+      "0x4300000000000000000000000000000000000003"
+    ]
+  },
+  {
+    "key": "monad",
+    "name": "Monad",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 143,
+    "nativeSymbol": "MON",
+    "nativeDecimals": 18,
+    "wrapped": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+    "logo": null,
+    "rpc": "https://rpc.monad.xyz",
+    "fallback": [
+      "https://rpc1.monad.xyz",
+      "https://rpc2.monad.xyz",
+      "https://rpc-mainnet.monadinfra.com"
+    ],
+    "explorer": "https://monadscan.com",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0x0ab828aa68499b56e9a47df9c4f1f5da703ff751",
+    "v3Router": "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+    "sources": [
+      {
+        "name": "Uniswap V2",
+        "type": "v2",
+        "router": "0x4B2ab38DBF28D31D467aA8993f6c2585981D6804",
+        "quoter": ""
+      },
+      {
+        "name": "PancakeSwap V2",
+        "type": "v2",
+        "router": "0xB1Bc24c34e88f7D43D5923034E3a14B24DaACfF9",
+        "quoter": ""
+      },
+      {
+        "name": "Uniswap V3",
+        "type": "v3",
+        "router": "0xfE31F71C1b106EAc32F1A19239c9a9A72ddfb900",
+        "quoter": "0x661e93cca42afacb172121ef892830ca3b70f08d"
+      },
+      {
+        "name": "PancakeSwap V3",
+        "type": "v3",
+        "router": "0x1b81D678ffb9C0263b24A97847620C99d213eB14",
+        "quoter": "0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997"
+      }
+    ],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0x4B2ab38DBF28D31D467aA8993f6c2585981D6804",
+      "0xB1Bc24c34e88f7D43D5923034E3a14B24DaACfF9"
+    ],
+    "stablecoins": [
+      "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+      "0xe7cd86e13AC4309349F30B3435a9d337750fC82D"
+    ]
+  },
+  {
+    "key": "fantom",
+    "name": "Fantom Opera",
+    "family": "evm",
+    "isEvm": true,
+    "chainId": 250,
+    "nativeSymbol": "FTM",
+    "nativeDecimals": 18,
+    "wrapped": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+    "logo": null,
+    "rpc": "https://rpcapi.fantom.network",
+    "fallback": [
+      "https://fantom.drpc.org"
+    ],
+    "explorer": "https://explorer.fantom.network",
+    "v2Factory": "0xf800bf07394e8290807b4ce579f4e9f99c3da869",
+    "v2Router": "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+    "v3Factory": "0x3d4e8c0e5ccc479f2ac5e499d3c5805a52273430",
+    "v3Router": "0xeb812c7c1487f897321e2f3d678ca2b48c53442d",
+    "sources": [
+      {
+        "name": "SpookySwap V2",
+        "type": "v2",
+        "router": "0xF491e7B69E4244ad4002BC14e878a34207E38c29",
+        "quoter": ""
+      },
+      {
+        "name": "SpookySwap V3 Router02",
+        "type": "v3",
+        "router": "0x40F70B72796C30f355dF859B2c8F94f18c38AdF8",
+        "quoter": "0xB9507f2ED171D52c5c2EFaeAbdE440d264504A92"
+      }
+    ],
+    "routers": [
+      "0x1bc619b7f70d2537daeeb30d4098cc9b7e32e9aa",
+      "0xF491e7B69E4244ad4002BC14e878a34207E38c29"
+    ],
+    "stablecoins": [
+      "0x1B6382DBDEa11d97f24495C9A90b7c88469134a4"
+    ]
+  }
+]

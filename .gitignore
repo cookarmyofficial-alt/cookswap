@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+data/
+backups/
+logs/
+*.pem
+*.key
+*.sqlite*
+*.log
+.DS_Store

@@ -1,0 +1,15 @@
+services:
+  swap:
+    build: .
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 5012
+      SWAP_ADMIN_DATA: /app/data/admin
+    ports:
+      - "127.0.0.1:5012:5012"
+    volumes:
+      - swap-data:/app/data
+    restart: unless-stopped
+volumes:
+  swap-data:

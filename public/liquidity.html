@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><script src="/wallet-session.js?v=1"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CookSwap — Liquidity</title><link rel="stylesheet" href="/style.css?v=3"><link rel="stylesheet" href="/liquidity.css?v=5"><script src="/api/vendor/ethers-6.15.0.js" defer></script><script src="/liquidity-wallet.js?v=wallet4" defer></script><script src="/liquidity.js?v=5" defer></script></head><body><header><a href="/" class="brand"><img src="/assets/token-default.svg" alt="" width="36" height="36">CookSwap</a><nav><a href="https://cookscan.net">Explorer ↗</a><a href="/bridge.html">Bridge</a><a href="/liquidity.html">Liquidity</a></nav><div class="header-actions"><select id="theme" aria-label="Theme"><option value="dim">Dim</option><option value="day">Day</option><option value="night">Night</option></select><button id="connect">Connect wallet</button></div></header><main class="liquidity-main"><section class="account-page">
+  <div class="intro"><span class="eyebrow">COOKDEX LIQUIDITY</span><h1>Make room for liquidity.</h1><p>The same pools. Across Cookdex and CookSwap.</p></div>
+  
+  
+  <details class="pool-create-toggle"><summary>Create a pool <span>+</span></summary><section class="account-section pool-create-section"><div class="pool-section-heading"><div><p class="eyebrow">Create Pool</p><h2>New liquidity pool</h2></div></div>
+  <form id="poolDraftForm" class="pool-form">
+    <label>Network<select name="chain" aria-label="Liquidity network"></select></label>
+    <label id="solanaPoolProviderField" class="hidden">Pool provider<select name="solanaProvider"><option value="meteora">Meteora DAMM</option><option value="raydium">Raydium CPMM</option><option value="orca">Orca Splash Pool</option></select><small>The official provider creates and owns the Solana pool program.</small></label>
+    <label>Protocol<select name="protocolVersion" id="poolProtocolVersion"></select></label>
+    <label><span id="poolTokenContractLabel">Token A contract</span><span class="pool-token-input"><img id="poolTokenLogo" src="/assets/token-default.svg" alt="" /><input name="tokenA" required placeholder="0x token A contract" autocomplete="off" spellcheck="false" /></span></label>
+    <label id="poolTokenBField">Token B contract<input name="tokenB" placeholder="0x token B contract (e.g. USDC)" autocomplete="off" spellcheck="false" /><small>Choose any ERC20 pair partner. Leave blank to use the native coin.</small></label>
+    <div id="poolTokenBIdentity" class="pool-token-identity" aria-live="polite"></div>
+    <div id="poolTokenIdentity" class="pool-token-identity" aria-live="polite"><strong>Token not loaded</strong><span>Enter a contract to resolve the token.</span></div>
+    <label>Target token price (USD)<input name="priceUsd" type="number" min="0" step="any" required placeholder="0.378" /></label>
+    <button type="button" id="poolMarketPrice" class="pool-market-price hidden"></button>
+    <label>Pool fee<select name="poolFeeBps" id="poolFeeBps" required></select></label>
+    <div class="pool-amount-grid">
+      <label>Liquidity protection<select name="lockMode" id="poolLockMode"><option value="unlocked">Unlocked</option><option value="locked">Time lock</option><option value="burned">Burn permanently</option></select></label>
+      <label id="poolUnlockAtField" class="hidden">Unlock date<input name="unlockAt" id="poolUnlockAt" type="datetime-local" /></label>
+    </div>
+    <div class="pool-amount-grid">
+      <label>Pool start<select name="startMode" id="poolStartMode"><option value="now">Start now</option><option value="scheduled">Scheduled launch</option></select></label>
+      <label id="poolStartsAtField" class="hidden">Launch date<input name="startsAt" id="poolStartsAt" type="datetime-local" /></label>
+    </div>
+    <div class="pool-amount-grid">
+      <label>Token amount<input name="tokenAmount" type="number" min="0" step="any" required placeholder="1000" /><small id="poolTokenBalance" class="pool-balance">Connect wallet to check balance</small></label>
+      <label><span id="poolNativeAmountLabel">Native amount</span><input name="nativeAmount" type="number" min="0" step="any" required placeholder="0" /><small id="poolNativeBalance" class="pool-balance">Connect wallet to check balance</small></label>
+    </div>
+    <div class="pool-result-price"><span>Resulting pool price</span><strong id="poolResultPrice">--</strong><small id="poolResultRatio">Enter both liquidity amounts</small></div>
+    <input name="nativePriceUsd" type="hidden" value="" /><input name="draftId" type="hidden" value="" />
+    <div id="poolQuote" class="pool-quote">Enter a token, target price and either amount. The other side is calculated from the native market price.</div>
+    <p id="solanaPoolNotice" class="pool-integration-status hidden">CookDEX opens the selected official Solana pool creator. Review pool type, fee and starting liquidity there before confirming in your wallet.</p>
+    <button type="submit">Create pool in wallet</button><p id="poolStatus" class="status-text"></p>
+  </form>
+  </section></details>
+  <section class="account-section pool-manager-section">
+    <div class="pool-section-heading"><h2>CookDEX pools</h2><button type="button" id="refreshPoolCatalog">Refresh</button></div>
+    <div class="pool-catalog-toolbar"><label for="poolChainFilter">Network <select id="poolChainFilter"><option value="">All chains</option></select></label><span id="poolCatalogCount" aria-live="polite"></span></div>
+    <p class="pool-integration-status">APR is an annualized estimate based on current 24h volume, pool fee and TVL; it is not guaranteed.</p>
+    <div id="poolCatalogList" class="pool-list"></div>
+  </section>
+  <section class="account-section pool-manager-section">
+    <div class="pool-section-heading"><h2>My liquidity pools</h2><button type="button" id="refreshPools">Refresh</button></div>
+    <p id="poolIntegrationStatus" class="pool-integration-status">Connect your wallet to load pools.</p>
+    <div id="poolList" class="pool-list"></div>
+  </section>
+  <dialog id="addLiquidityDialog" class="pool-dialog">
+    <form id="addLiquidityForm" class="pool-dialog-form">
+      <header class="pool-dialog-header">
+        <div class="pool-dialog-identity"><img id="addLiquidityLogo" src="/assets/token-default.svg" alt="" /><div><span>Add liquidity</span><strong id="addLiquidityPair">TOKEN / NATIVE</strong><small id="addLiquidityMeta"></small></div></div>
+        <button type="button" class="pool-dialog-close" data-close-pool-dialog aria-label="Close">&times;</button>
+      </header>
+      <div id="addLiquidityRatio" class="pool-dialog-ratio">Loading current pool balance...</div>
+      <div class="pool-amount-grid">
+        <label><span id="addLiquidityTokenLabel">Token amount</span><input name="tokenAmount" type="number" min="0" step="any" required autocomplete="off" /><small id="addLiquidityTokenBalance" class="pool-balance"></small></label>
+        <label><span id="addLiquidityNativeLabel">Native amount</span><input name="nativeAmount" type="number" min="0" step="any" required autocomplete="off" /><small id="addLiquidityNativeBalance" class="pool-balance"></small></label>
+      </div>
+      <label class="pool-native-range"><span>Native wallet amount for liquidity</span><input id="addLiquidityNativeRange" type="range" min="0" max="100" step="1" value="0" /><output id="addLiquidityNativeRangeValue" for="addLiquidityNativeRange">0%</output></label>
+      <label class="pool-auto-buy"><input name="autoBuyMissing" type="checkbox" checked /><span>Automatically buy only the missing token amount</span></label>
+      <div id="addLiquidityAutoBuy" class="pool-auto-buy-preview">Choose a native amount to calculate whether tokens must be bought.</div>
+      <input name="chain" type="hidden" /><input name="protocolVersion" type="hidden" /><input name="tokenA" type="hidden" /><input name="poolAddress" type="hidden" /><input name="poolFeeBps" type="hidden" />
+      <p id="addLiquidityStatus" class="status-text" aria-live="polite"></p>
+      <footer class="pool-dialog-actions"><button type="button" class="secondary-button" data-close-pool-dialog>Cancel</button><button type="submit" class="submit-button">Add liquidity</button></footer>
+    </form>
+  </dialog>
+  <dialog id="removeLiquidityDialog" class="pool-dialog">
+    <form id="removeLiquidityForm" class="pool-dialog-form">
+      <header class="pool-dialog-header">
+        <div class="pool-dialog-identity"><img id="removeLiquidityLogo" src="/assets/token-default.svg" alt="" /><div><span>Remove liquidity</span><strong id="removeLiquidityPair">TOKEN / NATIVE</strong><small id="removeLiquidityMeta"></small></div></div>
+        <button type="button" class="pool-dialog-close" data-close-pool-dialog aria-label="Close">&times;</button>
+      </header>
+      <label class="pool-remove-range"><span>Amount to remove</span><input name="percent" id="removeLiquidityPercent" type="range" min="0" max="100" step="1" value="100" /><output id="removeLiquidityPercentValue" for="removeLiquidityPercent">100%</output></label>
+      <label id="removePositionField" class="hidden">Position NFT ID<input name="positionTokenId" type="number" min="0" step="1" /></label>
+      <p class="pool-dialog-warning">The selected share is removed from this pool after wallet confirmation.</p>
+      <input name="source" type="hidden" /><input name="id" type="hidden" /><input name="chain" type="hidden" /><input name="protocolVersion" type="hidden" /><input name="token" type="hidden" /><input name="poolAddress" type="hidden" />
+      <p id="removeLiquidityStatus" class="status-text" aria-live="polite"></p>
+      <footer class="pool-dialog-actions"><button type="button" class="secondary-button" data-close-pool-dialog>Cancel</button><button type="submit" class="danger-button">Remove liquidity</button></footer>
+    </form>
+  </dialog>
+  
+  
+</section></main><footer><span>CookSwap · Liquidity</span><span>Powered by Cookdex V2 &amp; V3</span><a href="https://cookdex.net/pools">View on Cookdex ↗</a></footer></body></html>

@@ -1,0 +1,19 @@
+{
+  "name": "cookswap",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test test.mjs integration.test.mjs"
+  },
+  "dependencies": {
+    "ethers": "6.15.0",
+    "express": "4.21.2",
+    "@uniswap/v3-sdk": "3.25.2",
+    "@uniswap/sdk-core": "7.7.2",
+    "mysql2": "3.14.3"
+  },
+  "license": "MIT",
+  "description": "Self-hosted EVM swap interface with configurable CookDEX-compatible service adapters"
+}
