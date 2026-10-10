@@ -4,6 +4,10 @@ A self-hosted EVM swap application extracted from the current CookSwap implement
 
 You are welcome to use the existing CookDEX router and factory deployments in your own interface. The public network configuration retains their addresses, so your frontend can route swaps through the existing CookDEX pools. Deploying new routers or factories is not required. Verify the selected chain and addresses before use.
 
+## Technical documentation
+
+[Cookchain / CookDEX technical reference](docs/TECHNICAL_INFORMATION.md) covers V2/V3 factories and routers, EasyLaunch and system curves, official wCOOK contracts, bridge infrastructure and the statistics API. It includes links to the styled web reference and the contract listing PDF. Contract snapshot: 8 October 2026; documentation synchronized on 10 October 2026.
+
 ## Quick start
 
 Requires Node.js 24 and npm. Use the release ZIP or clone this repository:
